@@ -148,7 +148,7 @@ span.text-red {
 }
 
 .hero-banner-container {
-  height: calc(40px + 4vw + min(12vw,24rem) + 3vw + 20px);
+  height: calc(40px + 4vw + min(18vw,26rem) + 3vw + 40px);
   background-color: #dcdcdc;
   
   position: relative;
@@ -156,7 +156,7 @@ span.text-red {
   width: 100%;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 40px 4vw min(12vw,24rem) 3vw 20px;
+  grid-template-rows: 40px 5vw min(18vw,26rem) 3vw 40px;
   grid-template-areas:
     "bs bs img img"
     "mid mid img img"
@@ -195,8 +195,8 @@ span.text-red {
   background-color: #f02d34;
   color: white;
   border: none;
-  width: 50%;
-  margin: auto;
+  width: 30%;
+  margin:10px auto;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
@@ -213,14 +213,14 @@ span.text-red {
   grid-area: mid;
   padding-left: 40px;
   
-  font-size: clamp(2rem, 4vw, 10rem);
+  font-size: clamp(1.5rem, 6vw, 10rem);
   margin-top: 4px;
 }
 
 .hero-banner-container h1 {
   grid-area: large;
   color: white;
-  font-size: clamp(6rem, 12vw, 24rem);
+  font-size: clamp(4rem, 18vw, 24rem);
   padding-left: 40px;
   text-transform: uppercase;
 }
@@ -230,8 +230,8 @@ span.text-red {
 
   grid-area: img;
   max-width: clamp(
-    10rem, 18vw, 600px);
-  max-height: 600px;
+    9rem, 25vw, 550px);
+  max-height: 550px;
 
 }
 
@@ -245,7 +245,7 @@ span.text-red {
 }
 
 .desc p {
-  color: #5f5f5f;
+  color: #000000;
   font-weight: 100;
 
 
@@ -900,11 +900,11 @@ span.text-red {
 
   .hero-banner-container {
 
-    height: calc(3vw + 12vw + 25vw + 38vw + 5rem);
+    height: calc(3vw + 8vw + 16vw + 34vw + 7rem);
     display: grid;
 
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 3vw 12vw 25vw 38vw 2rem;
+    grid-template-rows: 3vw 10vw 18vw 34vw 2rem;
 
     grid-template-areas:
       "bs bs bs bs"
@@ -924,7 +924,7 @@ span.text-red {
   }
 
   .hero-banner-container .mid-text {
-    padding: 20px;
+    padding: 0px;
     grid-area: mid;
   }
   .hero-banner-container h1{
@@ -936,8 +936,10 @@ span.text-red {
   }
 
   .hero-banner-image {
-
+    max-width: clamp(
+    6rem, 32vw, 550px);
     margin-left: 3vw;
+    padding-top: 1vw;
     padding-right: 1vw;
     grid-area: img;
   }
@@ -1013,6 +1015,9 @@ span.text-red {
     display: grid;
     place-items: center;
 
+  }
+  .hero-banner-container button{
+    width:50%;
   }
 
   .footer-banner-image {
