@@ -1,11 +1,13 @@
 
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
+
+const secretkey=`${process.env.STRIPE_SECRET_KEY}`;
+const stripe = new Stripe(secretkey);
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-      console.log(req.body)
+      
     try {
         const params ={
             submit_type:'pay',

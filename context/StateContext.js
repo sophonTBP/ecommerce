@@ -21,9 +21,14 @@ export const StateContext = ({ children }) => {
 
         if (checkProductInCart) {
             const updatedCartItems = cartItems.map((cartProduct) => {
-                if (cartProduct._id === product._id) return {
+                if (cartProduct._id === product._id) {
+                
+                return {
                     ...cartProduct,
                     quantity: cartProduct.quantity + quantity
+                }
+            } else {
+                    return {...cartProduct}
                 }
             })
 
@@ -35,6 +40,8 @@ export const StateContext = ({ children }) => {
             setCartItems([...cartItems, { ...product }])
         }
         toast.success(`${qty} ${product.name}added to the cart`)
+         // so each product defaults to 1 when navigating to a new product
+        setQty(1);
     };
 
 
