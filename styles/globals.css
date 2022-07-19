@@ -26,17 +26,23 @@ a {
 
 }
 
-.logo {
-  align-self: center;
-}
+
+
 
 .navbar-container {
-
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "logo . marquee"
+     ;
   max-width: 1400px;
-  display: flex;
-  justify-content: space-between;
-  margin: 10px auto;
+ align-items: center;
+ align-content: center;
+
+  
+  margin: 0 auto;
   position: relative;
+  background-color: #000000;
 }
 
 
@@ -49,10 +55,11 @@ a {
 }
 
 .marquee {
-  position: relative;
+ 
   height: 400px;
   width: 100%;
   overflow-x: hidden;
+  
 }
 
 .track {
@@ -83,21 +90,20 @@ span.text-red {
 }
 
 .logo {
-  display: flex;
+  grid-area: logo;
   color: rgb(0, 0, 0);
   font-size: 18px;
-  align-items: center;
-  margin-left: 2rem;
-  
+ margin-left: 2%;
+transform: scale(0.6);
 }
 
 
 .logo a {
   font-size: clamp(1.3rem, 3.5vw, 3.5rem);
-  font-family: Cantarell!important;
+  font-family: Cantarell !important;
   margin-left: 2rem;
   font-weight: bold;
-  letter-spacing:0.3rem ;
+  letter-spacing: 0.3rem;
 }
 
 .cart-text {
@@ -107,7 +113,7 @@ span.text-red {
 }
 
 .cart-icon {
-
+  grid-area: marquee;
   margin-right: 2rem;
   font-size: 2rem;
   color: gray;
@@ -123,8 +129,8 @@ span.text-red {
 }
 
 .cart-item-qty {
-  position: absolute;
-  right: -8px;
+  position: relative;
+  
   font-size: 12px;
   color: #eee;
   background-color: #f02d34;
@@ -181,9 +187,9 @@ span.text-red {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    "img mid btn"
-    "bs mid btn"
-    ". . .";
+    "mid img btn"
+    "mid img bs"
+  ;
   text-align: center;
   justify-content: center;
   justify-items: center;
@@ -209,10 +215,10 @@ span.text-red {
 
 }
 
-.hero-banner-container button:hover{
-  
+.hero-banner-container button:hover {
+
   color: #000000;
-  
+
 
 }
 
@@ -251,7 +257,7 @@ span.text-red {
   grid-area: mid;
   color: #fff;
   font-family: Monoton;
-  font-size: clamp(1.5rem, 8vw, 10rem);
+  font-size: clamp(1.5rem, 6vw, 5rem);
   margin-top: 4px;
 }
 
@@ -265,9 +271,9 @@ span.text-red {
 
 .hero-banner-image {
   justify-self: center;
-  
+
   grid-area: img;
-  max-width: clamp(15rem, 23vw, 430px);
+  max-width: clamp(15rem, 23vw, 300px);
   max-height: 500px;
 
 }
@@ -295,10 +301,12 @@ span.text-red {
 
 
 .under-banner {
-  background-color: #000000;
-  padding-top: 18vh;
+  
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   display: flex;
-
+  background-image: url(../styles/heroBackground.png);
+  background-color: #343229;
 
 
 
@@ -314,7 +322,7 @@ span.text-red {
   min-width: 50px;
   margin: 1rem;
 
-  transform: scale(0.9);
+  transform: scale(0.5);
 }
 
 
@@ -340,7 +348,7 @@ span.text-red {
 
 .products-heading p {
   font-size: 16px;
-  
+
 }
 
 
@@ -512,10 +520,11 @@ span.text-red {
   letter-spacing: 3px;
 
 }
-.footerBtn:hover{
-  
+
+.footerBtn:hover {
+
   color: #000000;
-  
+
 
 }
 
@@ -1141,7 +1150,7 @@ align-items: center;
   }
 
   .hero-banner-image {
-    max-width: clamp(6rem, 32vw, 550px);
+    max-width: clamp(6rem, 25vw, 350px);
     margin-left: 3vw;
     padding-top: 1vw;
     padding-right: 1vw;
@@ -1156,7 +1165,7 @@ align-items: center;
     text-align: center;
   }
 
-  
+
 
   .button-container button {
     font-size: clamp(1.2rem, 1.2vw, 1.1rem);
@@ -1260,8 +1269,6 @@ align-items: center;
     margin-right: 0;
   }
 
-  .logo  {
-    margin-left: 0;
-  }
+  
 
 }

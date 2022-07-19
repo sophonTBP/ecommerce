@@ -3,9 +3,11 @@ import Link from "next/link";
 import { urlFor } from '../lib/client';
 
 
+/* 
+"écouteur acoustique haut-parleur studio son"
+ECOUTEUR ACOUSTIQUE HAUT-PARLEUR STUDIO SON
 
-
-
+ */
 
 
 const HeroBanner = ({ heroBanner }) => {

@@ -1,19 +1,19 @@
 import React from 'react'
-import document from './_document';
+import Document from './_document';
 import { client } from "../lib/client";
 import { Product, FooterBanner, HeroBanner, UnderBanner } from "../components"
 
 const Home = ({ products, bannerData }) => {
   return (
     <>
-      
+
 
 
       <div>
 
-
+        <UnderBanner />
         <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
-        <UnderBanner  />
+
         <div className='products-heading'>
           <h2>Meilleures Ventes</h2>
           <p>touts petits prix!</p>
