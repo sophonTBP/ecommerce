@@ -63,11 +63,11 @@ a {
 }
 
 .track {
-  position: absolute;
-  white-space: nowrap;
+  position: relative;
+  white-space: pre-wrap;
   will-change: transform;
   animation: marquee 15s linear infinite;
-  width: 180%;
+  width: 100vw;
 }
 
 .track:hover {
@@ -113,7 +113,7 @@ transform: scale(0.6);
 }
 
 .cart-icon {
-  grid-area: marquee;
+  grid-area: cart;
   margin-right: 2rem;
   font-size: 2rem;
   color: gray;
@@ -550,7 +550,9 @@ transform: scale(0.6);
 }
 
 .cart-wrapper {
-  width: 100vw;
+  margin-top:50%;
+  width: 1400px;
+  height: auto;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
 
@@ -565,7 +567,7 @@ transform: scale(0.6);
   width: 600px;
   background-color: white;
   float: right;
-  padding: 0;
+  
   position: relative;
 
 }
@@ -634,11 +636,11 @@ transform: scale(0.6);
   overflow: auto;
   max-height: 80vh;
   padding: 20px 10px;
-  padding-bottom: 6rem !important;
+  
 }
 
 .product {
-  display: flex;
+ 
   gap: 30px;
   padding: 20px;
 }
@@ -689,7 +691,7 @@ transform: scale(0.6);
 }
 
 .cart-bottom {
-  position: absolute;
+  position: relative;
   bottom: 12px;
   right: 5px;
   width: 100%;
@@ -1264,11 +1266,3 @@ align-items: center;
 
 }
 
-@media screen and (min-width:1600px) {
-  .cart-icon {
-    margin-right: 0;
-  }
-
-  
-
-}
