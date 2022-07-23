@@ -1,6 +1,6 @@
 
 import Stripe from 'stripe';
-
+import 'dotenv/config'
 
 const secretkey=`${process.env.STRIPE_SECRET_KEY}`;
 const stripe = new Stripe(secretkey);
